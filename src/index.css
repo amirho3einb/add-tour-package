@@ -1,0 +1,13 @@
+@import url("/src/fonts.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: iranyekan;
+  }
+  body {
+    background-color: #f9f9f9;
+  }
+}

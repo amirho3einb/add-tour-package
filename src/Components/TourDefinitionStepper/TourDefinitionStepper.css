@@ -1,0 +1,8 @@
+@import url("../../fonts.css");
+.css-zpcwqm-MuiStepConnector-root {
+  right: calc(-50% + 20px) !important;
+  left: calc(50% + 20px) !important;
+}
+.MuiStepper-horizontal * {
+  font-family: "iranyekan" !important;
+}
