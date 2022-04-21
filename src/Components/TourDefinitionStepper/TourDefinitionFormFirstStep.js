@@ -12,16 +12,16 @@ import DatePickerField from "../../common/DatePickerField/DatePickerField";
 const initialValues = {
   packageName: "",
   packageType: "",
-  FloatingCompanyId: "",
+  FloatingCompanyId: "hiuhjioajijopakpp",
   PackageRule: "",
   PackagePublishState: "",
-  PackageStartDate: "",
+  PackageStartDate: "1401/02/11",
   PackageFinishDate: "",
   PackageSources: "",
   PackageDestinations: "",
-  PackageState: "",
-  PackageTourLeader: "",
-  PackageId: "",
+  PackageState: "0",
+  PackageTourLeader: "امیرحسین بالاگر",
+  PackageId: "1234567989",
 };
 
 const validationSchema = Yup.object({
@@ -70,6 +70,7 @@ const TourDefinitionFormFirstStep = () => {
     const {
       packageName,
       packageType,
+      FloatingCompanyId,
       PackageRule,
       PackagePublishState,
       PackageStartDate,
@@ -81,7 +82,7 @@ const TourDefinitionFormFirstStep = () => {
     const userData = {
       packageName,
       packageType,
-      FloatingCompanyId: "hiuhjioajijopakpp",
+      FloatingCompanyId,
       PackageRule,
       PackagePublishState,
       PackageStartDate,
@@ -93,6 +94,7 @@ const TourDefinitionFormFirstStep = () => {
       PackageId: "",
     };
     try {
+      console.log(userData);
       //const { data } = await signupUser(userData);
       //setAuth(data);
       //history.push(redirect);
@@ -140,7 +142,7 @@ const TourDefinitionFormFirstStep = () => {
         />
         <SelectForm
           formik={formik}
-          name="PackageRule"
+          name="PackagePublishState"
           label="وضعیت"
           options={PackagePublishState}
         />
@@ -153,9 +155,10 @@ const TourDefinitionFormFirstStep = () => {
           locale={persian_fa}
           calendarPosition="bottom-right"
         /> */}
-        <Formik>
-          <DatePickerField name="PackageStartDate" />
-        </Formik>
+
+        <DatePickerField formik={formik} name="PackageStartDate" />
+        <DatePickerField formik={formik} name="PackageFinishDate" />
+
         <button
           type="submit"
           disabled={!formik.isValid}
