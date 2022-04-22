@@ -11,9 +11,10 @@ const DatePickerField = ({ name, formik }) => {
         label={name}
         id={name}
         name={name}
+        placeholder="انتخاب تاریخ"
         value={Date.parse(formik.values[name])}
         onChange={(value) => {
-          formik.setFieldValue(name, value.unix * 1000);
+          formik.setFieldValue(name, String(value.unix * 1000));
         }}
         format={"YYYY/MM/DD"}
         calendar={persian}
