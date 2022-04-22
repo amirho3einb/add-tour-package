@@ -15,7 +15,7 @@ const initialValues = {
   FloatingCompanyId: "hiuhjioajijopakpp",
   PackageRule: "",
   PackagePublishState: "",
-  PackageStartDate: "1401/02/11",
+  PackageStartDate: "",
   PackageFinishDate: "",
   PackageSources: "",
   PackageDestinations: "",
